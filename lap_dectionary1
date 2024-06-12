@@ -1,0 +1,30 @@
+phone_book = {"0568323222" : "Amal",
+            "0522222232" : "Mohammed",
+            "0532335983" : "Khadijah",
+            "0545341144" : "Abdullah",
+            "0545534556" : "Rawan",
+            "0560664566" : "Faisal",
+            "0567917077" : "Layla" }
+
+num:str = input("Please enter your number: ")
+
+if len(num) != 10 or not num.isdigit():
+    print("This is an invalid number")
+else:
+    found = False
+    for(number, name) in phone_book.items():
+        if number == num:
+            found = True
+            print("Owner: ", name)
+    if not found:
+        print("Sorry, the number is not found!")
+
+
+#Q2
+List = [5, 0, 34, 9, 0, 13, 8]
+
+def sort_numbers(List):
+    List.sort(reverse=True)
+    return List
+
+print(sort_numbers(List))
