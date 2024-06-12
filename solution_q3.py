@@ -109,8 +109,16 @@ def update_city():
         print("City not found.")
 
 while True:
-    user_choice = input("Enter 1 to add weather data, 2 to search weather data, 3 to delete weather data, 4 to update weather data, 5 to exit: ")
-
+    menu = (
+        "Please select an option from the menu:\n"
+        "1: Add weather data\n"
+        "2: Search weather data\n"
+        "3: Delete weather data\n"
+        "4: Update weather data\n"
+        "5: Exit\n"
+        "Enter your choice (1-5): "
+    )  
+    user_choice = input(menu)
     if user_choice == "1":
        add_city()
        
