@@ -30,7 +30,7 @@ def is_date(date:str) -> bool:
     Returns: True if the string follows this pattern: DD(-|_|.|/)MM(-|_|.|/)YYYY.
              False otherwise.
     '''
-    pattern:str = "(0?[1-9]|[12][0-9]|3[01])(-|_|\.|\/)(0?[1-9]|1[12])(-|_|\.|\/)(1?9?|2?0?)[\d]{2}"
+    pattern:str = "(0[1-9]|[12][0-9]|3[01])(-|_|\.|\/)(0[1-9]|1[12])(-|_|\.|\/)(19|20)[\d]{2}"
     if re.search(pattern, date):
         return True
     else:
